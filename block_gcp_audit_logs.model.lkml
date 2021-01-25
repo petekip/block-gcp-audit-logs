@@ -1,5 +1,5 @@
 connection: "looker-private-demo"
-label: "GCP Security"
+#label: "GCP Security"
 
 include: "/views/**/*.view"
 include: "*.explore.lkml"

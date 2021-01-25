@@ -1,9 +1,9 @@
 {
-  "label": "Search Ads 360",
+  "label": "GCP Audit Log Analysis",
   "category_label": "Models",
   "branding": {
     "image_uri": "https://marketplace-api.looker.com/block-icons/sa360_icon.jpg",
-    "tagline": "A smarter, cleaner way to gather and share insights from your Search Ads 360."
+    "tagline": "Looker’s GCP Audit Log Analysis Block provides a means for easily exploring and reporting and alerting on GCP audit log data."
   },
 
   "constants": {
@@ -12,7 +12,7 @@
       "value_constraint": "connection"
     },
     "DATASET_NAME": {
-      "label": "GCP Audit Log Dataset Name"
+      "label": "GCP Audit Logs Dataset Name"
     },
     "CONFIG_PROJECT_NAME": {
       "label": "Config Project Name"
@@ -20,15 +20,15 @@
   },
   "models": [
     {
-      "name": "block_sa360",
+      "name": "block_gcp_audit_logs",
       "connection_constant": "CONNECTION_NAME"
     }
   ],
   "auxiliary_projects": [
     {
-      "git_uri": "git://github.com/llooker/block-sa360-config.git",
-      "git_ref": "",
-      "label": "Search Ads 360 Config",
+      "git_uri": "git://github.com/llooker/block-gcp-audit-logs-config.git",
+      "git_ref": "75c4bdac396de595c0e70910b14badbc34cb7270",
+      "label": "GCP Audit Logs Config",
       "constant_name": "CONFIG_PROJECT_NAME"
     }
   ]

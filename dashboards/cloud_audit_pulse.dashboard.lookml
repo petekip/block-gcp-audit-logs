@@ -195,65 +195,6 @@
     col: 0
     width: 24
     height: 10
-  - title: Brute-Force Attacks
-    name: Brute-Force Attacks
-    model: block_gcp_audit_logs
-    explore: failed_logins
-    type: single_value
-    fields: [failed_logins.brute_force_attacks]
-    filters:
-      failed_logins.date_filter: 3 weeks
-      failed_logins.failed_login_threshold: '5'
-    limit: 500
-    column_limit: 50
-    custom_color_enabled: true
-    show_single_value_title: true
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: true
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    conditional_formatting: [{type: greater than, value: 0, background_color: "#EA4335",
-        font_color: "#080808", color_application: {collection_id: google, palette_id: google-sequential-0},
-        bold: false, italic: false, strikethrough: false, fields: !!null ''}]
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: ''
-    limit_displayed_rows: false
-    legend_position: center
-    point_style: none
-    show_value_labels: false
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    defaults_version: 1
-    series_types: {}
-    hidden_fields: []
-    y_axes: []
-    listen: {}
-    row: 0
-    col: 18
-    width: 6
-    height: 4
   - title: Failed Logins
     name: Failed Logins (2)
     model: block_gcp_audit_logs
@@ -312,7 +253,7 @@
     listen: {}
     row: 0
     col: 0
-    width: 6
+    width: 8
     height: 4
   - title: "% Failed Logins Today"
     name: "% Failed Logins Today"
@@ -370,8 +311,8 @@
     y_axes: []
     listen: {}
     row: 0
-    col: 6
-    width: 6
+    col: 8
+    width: 8
     height: 4
   - title: IAM Elevations
     name: IAM Elevations
@@ -440,8 +381,8 @@
     y_axes: []
     listen: {}
     row: 0
-    col: 12
-    width: 6
+    col: 16
+    width: 8
     height: 4
   - title: Access Elevations by Day
     name: Access Elevations by Day
