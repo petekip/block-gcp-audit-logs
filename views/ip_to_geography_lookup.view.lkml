@@ -1,4 +1,13 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/ip_to_geography_lookup.view.lkml"
+
+
 view: ip_to_geography_lookup {
+  extends: [ip_to_geography_lookup_config]
+}
+
+###################################################
+
+view: ip_to_geography_lookup_core {
   derived_table: {
     datagroup_trigger: daily_group
     sql: SELECT

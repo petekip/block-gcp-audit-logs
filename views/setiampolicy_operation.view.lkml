@@ -1,5 +1,13 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/setiampolicy_operation.view.lkml"
+
 
 view: setiampolicy_operation {
+  extends: [setiampolicy_operation_config]
+}
+
+###################################################
+
+view: setiampolicy_operation_core {
   derived_table: {
     sql: with iam_operations as
         (SELECT
@@ -17,7 +25,7 @@ view: setiampolicy_operation {
             FROM UNNEST(json_extract_array(protopayload_auditlog.requestJson,'$.policy.bindings')) bindings
           ) AS access_list,
           timestamp
-        FROM `security_logs.cloudaudit_googleapis_com_activity`
+        FROM `@{DATASET_NAME}.cloudaudit_googleapis_com_activity`
         where lower(protopayload_auditlog.methodName) like '%setiampolicy%' AND (((timestamp ) >= ((TIMESTAMP_ADD(TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), DAY), INTERVAL -29 DAY))) AND (timestamp ) < ((TIMESTAMP_ADD(TIMESTAMP_ADD(TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), DAY), INTERVAL -29 DAY), INTERVAL 30 DAY)))))
         )
         select

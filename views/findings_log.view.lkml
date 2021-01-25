@@ -1,5 +1,14 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/findings_log.view.lkml"
+
+
 view: findings_log {
-  sql_table_name: `looker-private-demo.security_logs.findings_log`
+  extends: [findings_log_config]
+}
+
+###################################################
+
+view: findings_log_core {
+  sql_table_name: `@{DATASET_NAME}.findings_log`
     ;;
     view_label: "SCC Findings"
 

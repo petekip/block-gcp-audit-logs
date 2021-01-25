@@ -5,7 +5,7 @@
   elements:
   - title: Denies and Grants by Day
     name: Denies and Grants by Day
-    model: gcp_security
+    model: block_gcp_audit_logs
     explore: activity
     type: looker_line
     fields: [activity.access_denials, activity.access_grants, activity.timestamp_date]
@@ -64,7 +64,7 @@
     height: 8
   - title: Access Activity
     name: Access Activity
-    model: gcp_security
+    model: block_gcp_audit_logs
     explore: activity
     type: looker_grid
     fields: [activity.timestamp_time, activity_authorization_info.granted, activity_authorization_info.permission,
@@ -137,7 +137,7 @@
     height: 8
   - title: Identities Created by Principal Email
     name: Identities Created by Principal Email
-    model: gcp_security
+    model: block_gcp_audit_logs
     explore: activity
     type: table
     fields: [activity.email_id]
@@ -168,7 +168,7 @@
     height: 6
   - title: Identity That Created This Principal Email
     name: Identity That Created This Principal Email
-    model: gcp_security
+    model: block_gcp_audit_logs
     explore: activity
     type: table
     fields: [activity_authentication_info.principal_email, activity.timestamp_date]
@@ -217,7 +217,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: gcp_security
+    model: block_gcp_audit_logs
     explore: activity
     listens_to_filters: []
     field: activity.timestamp_date

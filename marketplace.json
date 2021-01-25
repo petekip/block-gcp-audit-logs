@@ -11,11 +11,8 @@
       "label": "Connection Name",
       "value_constraint": "connection"
     },
-    "SA_360_SCHEMA": {
-      "label": "Search Ads 360 Schema Name"
-    },
-    "ADVERTISER_ID": {
-      "label": "Advertiser ID from Search Ads 360"
+    "DATASET_NAME": {
+      "label": "GCP Audit Log Dataset Name"
     },
     "CONFIG_PROJECT_NAME": {
       "label": "Config Project Name"
@@ -36,4 +33,3 @@
     }
   ]
 }
-

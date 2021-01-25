@@ -1,5 +1,15 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/activity.view.lkml"
+
+
 view: activity {
-  sql_table_name: `security_logs.cloudaudit_googleapis_com_activity`
+  extends: [activity_config]
+}
+
+###################################################
+
+
+view: activity_core {
+  sql_table_name: `@{DATASET_NAME}.cloudaudit_googleapis_com_activity`
     ;;
   label: "Admin Activity"
 
