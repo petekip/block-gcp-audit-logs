@@ -26,7 +26,7 @@
   ],
   "auxiliary_projects": [
     {
-      "git_uri": "git://github.com/llooker/block-gcp-audit-logs-config.git",
+      "git_uri": "git://github.com/looker/block-gcp-audit-logs-config.git",
       "git_ref": "75c4bdac396de595c0e70910b14badbc34cb7270",
       "label": "GCP Audit Logs Config",
       "constant_name": "CONFIG_PROJECT_NAME"
