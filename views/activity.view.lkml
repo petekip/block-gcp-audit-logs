@@ -879,7 +879,7 @@ view: activity_authentication_info {
     sql: ${TABLE}.principalEmail ;;
     link: {
       label: "Account Investigation"
-      url: "/dashboards-next/832?Principal+Email={{ value | encode_uri }}"
+      url: "/dashboards-next/block_gcp_audit_logs::account_lookup?Principal+Email={{ value | encode_uri }}"
     }
     action: {
       label: "Email This Principal Email Address"
