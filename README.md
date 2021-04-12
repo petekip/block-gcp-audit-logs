@@ -25,9 +25,7 @@
 
 * The ``access`` and ``activity`` views are the foundation of this block and the other views are used for supplemental analysis: a derived table for IAM analysis, an IP geo lookup view, and derived tables used to identify failed access attempts followed by a grant. The model file defines some simple explores. This block uses some SQL specific to BQ to unnest and handle structs, arrays, and JSON data.
 
-### What if I find an error? Suggestions for improvements?
 
-Great! Blocks were designed for continuous improvement through the help of the entire Looker community, and we'd love your input. To log an error or improvement recommendations, simply create a "New Issue" in the corresponding [Github repo for this Block](https://github.com/llooker/google_ga360/issues). Please be as detailed as possible in your explanation, and we'll address it as quick as we can.
 
 ### Further analysis in consideration for a v2 of this block
 
@@ -37,4 +35,4 @@ Great! Blocks were designed for continuous improvement through the help of the e
 
 * Other high-value and broadly-applicable analytics use cases we identify in the field
 
-### Notes and Other Known Issues
+
