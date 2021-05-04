@@ -1,4 +1,4 @@
-connection: "looker-private-demo"
+connection: "@{CONNECTION_NAME}"
 #label: "GCP Security"
 
 include: "/views/**/*.view"
