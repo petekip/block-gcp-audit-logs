@@ -1,5 +1,6 @@
-explore: access_core {
-  extension: required
+include: "/views/*.view"
+
+explore: access {
   view_label: "Data Access"
   join: access_auditlog {
     sql: LEFT JOIN UNNEST([${access.protopayload_auditlog}]) as access_auditlog ;;

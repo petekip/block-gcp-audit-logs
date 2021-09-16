@@ -1,13 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/findings_log.view.lkml"
-
-
 view: findings_log {
-  extends: [findings_log_config]
-}
-
-###################################################
-
-view: findings_log_core {
   sql_table_name: `@{DATASET_NAME}.findings_log`
     ;;
     view_label: "SCC Findings"
@@ -123,7 +114,7 @@ view: findings_log_core {
     sql: JSON_EXTRACT_SCALAR(${TABLE}.sourceProperties, "$.compromised_account") ;;
     link: {
       label: "Account Investigation"
-      url: "/dashboards-next/block_gcp_audit_logs::account_lookup?Principal+Email={{ value | encode_uri }}"
+      url: "/dashboards-next/block_gcp_audit_logs_v2::account_lookup?Principal+Email={{ value | encode_uri }}"
       icon_url: "https://www.looker.com/favicon.ico"
     }
   }

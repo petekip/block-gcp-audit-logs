@@ -1,5 +1,6 @@
-explore: activity_core {
-  extension: required
+include: "/views/*.view"
+
+explore: activity {
   always_filter: {
     filters: [activity.timestamp_date: "3 days"]
   }
