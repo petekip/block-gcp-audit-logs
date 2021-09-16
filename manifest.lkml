@@ -4,10 +4,10 @@ project_name: "block-gcp-audit-logs"
 
 constant: CONNECTION_NAME {
   value: "looker-private-demo"
-  export: override_required
+  export: override_optional
 }
 
 constant: DATASET_NAME {
   value: "security_logs"
-  export: override_required
+  export: override_optional
 }
