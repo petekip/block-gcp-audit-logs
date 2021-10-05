@@ -5,7 +5,7 @@
   elements:
   - title: Accounts Accessing Many Services in an hour
     name: Accounts Accessing Many Services in an hour
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: looker_grid
     fields: [activity.count_services, activity.timestamp_hour, activity_authentication_info.principal_email]
@@ -90,7 +90,7 @@
     height: 9
   - title: Failed Access Attempts
     name: Failed Access Attempts
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: looker_line
     fields: [activity.timestamp_date, activity.service_name, activity.access_denials]
@@ -152,7 +152,7 @@
     height: 9
   - title: Failed Logins
     name: Failed Logins
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: looker_map
     fields: [ip_to_geography_lookup.location, activity.count, ip_to_geography_lookup.is_unexpected_country]
@@ -197,7 +197,7 @@
     height: 10
   - title: Failed Logins
     name: Failed Logins (2)
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.access_denials, activity.timestamp_date]
@@ -257,7 +257,7 @@
     height: 4
   - title: "% Failed Logins Today"
     name: "% Failed Logins Today"
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.percent_failed_logins]
@@ -316,7 +316,7 @@
     height: 4
   - title: IAM Elevations
     name: IAM Elevations
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: setiampolicy_operation
     type: single_value
     fields: [setiampolicy_operation.count, setiampolicy_operation.timestamp_date]
@@ -386,7 +386,7 @@
     height: 4
   - title: Access Elevations by Day
     name: Access Elevations by Day
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: setiampolicy_operation
     type: looker_area
     fields: [setiampolicy_operation.count, setiampolicy_operation.timestamp_date]
@@ -455,7 +455,7 @@
     height: 7
   - title: Critical Elevations by Granter
     name: Critical Elevations by Granter
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: setiampolicy_operation
     type: looker_grid
     fields: [setiampolicy_operation.count, setiampolicy_operation.granter_email]
@@ -531,7 +531,7 @@
     height: 6
   - title: Critical Elevations by Grantee
     name: Critical Elevations by Grantee
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: setiampolicy_operation
     type: looker_grid
     fields: [setiampolicy_operation.count, setiampolicy_operation.grantee_email]
@@ -627,7 +627,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     listens_to_filters: []
     field: activity.timestamp_date

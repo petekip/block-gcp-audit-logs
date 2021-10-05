@@ -5,7 +5,7 @@
   elements:
   - title: Total MITRE ATT&CK Tactics Activity
     name: Total MITRE ATT&CK Tactics Activity
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.total_mitre_api_calls]
@@ -30,7 +30,7 @@
     height: 2
   - title: Collection
     name: Collection
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.collection_total]
@@ -55,7 +55,7 @@
     height: 4
   - title: Credential Access
     name: Credential Access
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.credential_access_total]
@@ -80,7 +80,7 @@
     height: 4
   - title: Defense Evasion
     name: Defense Evasion
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.defense_evasion_total]
@@ -105,7 +105,7 @@
     height: 4
   - title: Discovery
     name: Discovery
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.discovery_total]
@@ -130,7 +130,7 @@
     height: 4
   - title: Exfiltration
     name: Exfiltration
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.exfiltration_total]
@@ -155,7 +155,7 @@
     height: 4
   - title: Initial Access
     name: Initial Access
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.initial_access_total]
@@ -180,7 +180,7 @@
     height: 4
   - title: Persistence
     name: Persistence
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.persistence_total]
@@ -205,7 +205,7 @@
     height: 4
   - title: Privilege Escalation
     name: Privilege Escalation
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: single_value
     fields: [activity.privilege_escalation_total]
@@ -239,7 +239,7 @@
     height: 4
   - title: MITRE ATT&CK Tactics Activity
     name: MITRE ATT&CK Tactics Activity
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: looker_line
     fields: [activity.timestamp_week, activity.total_mitre_api_calls]
@@ -295,7 +295,7 @@
     height: 4
   - title: Accounts With MITRE ATT&CK Activity
     name: Accounts With MITRE ATT&CK Activity
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     type: looker_grid
     fields: [activity.total_mitre_api_calls, activity_authentication_info.principal_email]
@@ -343,7 +343,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: block_gcp_audit_logs
+    model: block_gcp_audit_logs_v2
     explore: activity
     listens_to_filters: []
     field: activity.timestamp_date

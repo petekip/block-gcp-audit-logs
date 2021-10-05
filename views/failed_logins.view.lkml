@@ -6,7 +6,7 @@
 # Scheduling this query to alert you when certain criteria are met can help you stay on top of your security threats without having to manually check logs.
 # Our solution uses four CTEs to calculate all of the necessary fields needed to identify threats.
 
-# view: failed_logins_core {
+# view: failed_logins {
 #   derived_table: {
 #     sql:
 #   -- Create a temp table that has all logins by date, service, and email and number/rank them by date and date, granted per user

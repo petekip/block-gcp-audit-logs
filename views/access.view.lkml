@@ -1,13 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/access.view.lkml"
-
-
 view: access {
-  extends: [access_config]
-}
-
-###################################################
-
-view: access_core {
   sql_table_name: `@{DATASET_NAME}.cloudaudit_googleapis_com_data_access`;;
     label: "Data Access"
 

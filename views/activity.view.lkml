@@ -1,14 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/activity.view.lkml"
-
-
 view: activity {
-  extends: [activity_config]
-}
-
-###################################################
-
-
-view: activity_core {
   sql_table_name: `@{DATASET_NAME}.cloudaudit_googleapis_com_activity`
     ;;
   label: "Admin Activity"
@@ -879,7 +869,7 @@ view: activity_authentication_info {
     sql: ${TABLE}.principalEmail ;;
     link: {
       label: "Account Investigation"
-      url: "/dashboards-next/block_gcp_audit_logs::account_lookup?Principal+Email={{ value | encode_uri }}"
+      url: "/dashboards-next/block_gcp_audit_logs_v2::account_lookup?Principal+Email={{ value | encode_uri }}"
     }
     action: {
       label: "Email This Principal Email Address"

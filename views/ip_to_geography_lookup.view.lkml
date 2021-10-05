@@ -1,13 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/ip_to_geography_lookup.view.lkml"
-
-
 view: ip_to_geography_lookup {
-  extends: [ip_to_geography_lookup_config]
-}
-
-###################################################
-
-view: ip_to_geography_lookup_core {
   derived_table: {
     datagroup_trigger: daily_group
     sql: SELECT
@@ -21,8 +12,6 @@ view: ip_to_geography_lookup_core {
               order by 1 asc
                ;;
   }
-
-
 
   dimension: start_ipv4_to_int64 { group_label: "IP Geography Fields"
     type: number

@@ -1,13 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/setiampolicy_operation.view.lkml"
-
-
 view: setiampolicy_operation {
-  extends: [setiampolicy_operation_config]
-}
-
-###################################################
-
-view: setiampolicy_operation_core {
   derived_table: {
     sql: with iam_operations as
         (SELECT
