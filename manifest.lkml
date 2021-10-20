@@ -8,6 +8,6 @@ constant: CONNECTION_NAME {
 }
 
 constant: DATASET_NAME {
-  value: "looker-private-demo.security_logs"
+  value: "security_logs"
   export: override_optional
 }
