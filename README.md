@@ -25,14 +25,13 @@
 
 * The ``access`` and ``activity`` views are the foundation of this block and the other views are used for supplemental analysis: a derived table for IAM analysis, an IP geo lookup view, and derived tables used to identify failed access attempts followed by a grant. The model file defines some simple explores. This block uses some SQL specific to BQ to unnest and handle structs, arrays, and JSON data.
 
+* This block utilizes Refinement files for customization. For more information on using refinements to customize marketplace blocks, please see [this documentation](https://docs.looker.com/data-modeling/marketplace/customize-blocks).
 
 
-### Further analysis in consideration for a v2 of this block
+### Further analysis in consideration for a future version of this block
 
 * VPC Flow log model and content
 
 * Data Access content
 
 * Other high-value and broadly-applicable analytics use cases we identify in the field
-
-
